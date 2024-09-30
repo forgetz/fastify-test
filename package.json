@@ -1,4 +1,8 @@
 {
+  "name": "fastify-application",
+  "version": "1.0.0",
+  "description": "Fastify Application",
+  "main": "main.js",
   "scripts": {
     "start": "bun main.js",
     "dev": "bun run --watch main.js"
@@ -8,6 +12,7 @@
     "@fastify/swagger-ui": "^5.0.1",
     "amqplib": "^0.10.4",
     "dotenv": "^16.4.5",
+    "elastic-apm-node": "^4.7.3",
     "express": "^4.21.0",
     "fastify": "^5.0.0",
     "fastify-plugin": "^5.0.1",

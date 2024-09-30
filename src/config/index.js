@@ -22,5 +22,11 @@ module.exports = {
       maxAttempts: 10,
       retryDelay: 3000
     }
+  },
+  apm: {
+    serviceName: process.env.APM_SERVICE_NAME,
+    secretToken: process.env.APM_SECRET_TOKEN,
+    serverUrl: process.env.APM_SERVER_URL,
+    environment: process.env.APM_ENVIRONMENT
   }
 };
