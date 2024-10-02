@@ -1,14 +1,14 @@
-# Use the official Node.js image as a base
-FROM node:16
+# Use the official Bun image as a base
+FROM oven/bun:latest
 
 # Set the working directory
 WORKDIR /usr/src/app
 
-# Copy package.json and package-lock.json
-COPY package*.json ./
+# Copy bun.lockb and package.json
+COPY bun.lockb package.json ./
 
 # Install dependencies
-RUN npm install
+RUN bun install
 
 # Copy the rest of the application code
 COPY . .
@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # Command to run your application
-CMD ["node", "src/index.js"]
+CMD ["bun", "src/index.js"]
