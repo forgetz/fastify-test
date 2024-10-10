@@ -1,5 +1,5 @@
 # Use the official Node.js image as a base
-FROM node:16
+FROM node:22-alpine
 
 # Set the working directory
 WORKDIR /usr/src/app
@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Expose the port your app runs on
-EXPOSE 3000
+EXPOSE 80
 
 # Command to run your application
-CMD ["node", "src/index.js"]
+CMD ["node", "main.js"]

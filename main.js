@@ -11,7 +11,12 @@ const apm = require('elastic-apm-node').start({
 const fastify = require('./src/app');
 const { port } = require('./src/config');
 
-fastify.listen({ port }, (err, address) => {
+const dotenv = require('dotenv');
+
+const env = process.env.ENV || 'sit'; // Default to 'sit' if NODE_ENV is not set
+dotenv.config({ path: `.env.${env}` });
+
+fastify.listen({ port, host: "0.0.0.0" }, (err, address) => {
   if (err) {
     fastify.log.error(err);
     process.exit(1);

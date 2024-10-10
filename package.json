@@ -4,8 +4,8 @@
   "description": "Fastify Application",
   "main": "main.js",
   "scripts": {
-    "start": "bun main.js",
-    "dev": "bun run --watch main.js"
+    "start": "node main.js",
+    "dev": "node run --watch main.js"
   },
   "dependencies": {
     "@fastify/swagger": "^9.1.0",
